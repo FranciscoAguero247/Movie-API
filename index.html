@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Movie Motion Info</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+    <script src="https://kit.fontawesome.com/89aa2b7dfe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<section>
+    <nav>
+      <div class="nav__container">
+        <img class="logo" src="assets/Library.svg" alt="">
+        <h1 class="movie__title--header">Movie Motion <span style="color: green;">G</span></h1>
+        <ul class="nav__links">
+          <li><a href="#movies__main" class="nav__link">Home</a></li>
+          <li><a href="#movies__main" class="nav__link nav__link--primary">Movies!</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop" style="visibility: hidden;">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#movies__main" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#movies__main" class="menu__link" onclick="closeMenu()">Movies!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+
+<main id="movies__main">
+  <section>
+    <div class="container">
+      <div class="row row__column"> <form class="search-form" id="searchForm">
+            <input type="text" id="myInput" placeholder="Search for movies..." required>
+            <button type="submit" class="search-wrapper" id="searchBtn">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+
+        <div class="movies__header">
+
+            <h2 class="movies__header--title">
+              Search results for: <span id="search-term" class="color__green">"Trending"</span>
+            </h2>
+
+        </div>
+
+        <div class="movie__container" id="movieList"></div>
+        <div id="skeleton-wrapper" class="movie__container hidden"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row row__column">
+      <a href="#">
+        <figure class="footer__logo">
+        
+        </figure>
+      </a>
+      <div class="footer__list">
+        <a href="#movies__main" class="footer__link">Home</a>
+      </div>
+      <div class="footer__copyright">Copyright &copy; 2021 Movie Motion <span style="color: green;">G</span></div>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</html>
